@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Util {
 
-    public Map getBook(){
+    public static Map<String, List<String>> getBook(){
         List<String> ivanov = new ArrayList<String>();
         ivanov.add("+8 800 2000 500");
         ivanov.add("+8 800 200 600");
