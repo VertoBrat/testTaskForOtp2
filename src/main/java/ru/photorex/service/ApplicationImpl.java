@@ -12,6 +12,9 @@ public class ApplicationImpl implements Application {
         PhoneBookService phoneBookService = new PhoneBookServiceImpl();
         SearchService searchService = new SearchServiceImpl(phoneBookService);
 
+        ioService.printString("В записной книжке есть такие телефоны: ");
+        phoneBookService.getBook().getPersons().forEach(p -> ioService.printString(p.getFirstName() + " " + p.getLastName()));
+
         while (!exit) {
             ioService.printString("Введите Фамилию");
             String lastName = ioService.readString();
